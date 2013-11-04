@@ -1,0 +1,180 @@
+\documentclass[a4paper,adobefonts,11pt,UTF8]{book}
+
+\usepackage{ctex}
+\usepackage{makeidx}
+\usepackage[headheight=13.6pt]{geometry}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+
+\usepackage[svgnames,table]{xcolor}
+\usepackage{paralist}
+\usepackage{longtable}
+\usepackage{ulem}
+%\usepackage{rotating}
+\usepackage{color,colortbl,xcolor}
+
+
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue},
+	columns=flexible
+}
+
+\usepackage{bashful}
+
+\usepackage[bookmarksnumbered,pdfencoding=auto,pdfauthor={穷屌丝联盟},pdfpagelayout=TwoPageRight,breaklinks,colorlinks,linkcolor=RoyalBlue,urlcolor=blue,colorlinks=true]{hyperref}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+%titlepage \titleGM
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{0.2\textwidth} % Whitespace to the left of the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\Huge\bfseries A Collection of \\[0.5\baselineskip] CSS}\\[2\baselineskip] % Title
+{\large \textit{Cascading Style Sheets}}\\[4\baselineskip] % Tagline or further description
+{\Large \textsc{theqiong.com}} % Author name
+
+\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+{\noindent 穷屌丝联盟 }\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+%
+
+%lstlisting[language=CSS]
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{CSS}{
+    keywords={color,background,font-family,background-image,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width, transform, transition, transition-property, transition-duration, transition-timing-function},
+    alsodigit={-},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]",
+    moredelim=[is][\bfseries]{/@}{@/}, % Typesets characters between /@ and @/ delimeters in boldface.
+}
+
+\lstset{%
+    % General design
+    backgroundcolor=\color{lightgray},
+    basicstyle={\small\ttfamily},   
+    frame=l,
+    % Code design
+    identifierstyle=\color{black},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywordstyle=\color{greenCode}\bfseries,
+    stringstyle=\color{black}\ttfamily,
+    commentstyle=\color{darkgray}\ttfamily,
+    % Code
+    language={CSS},
+    tabsize=2,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    % line-numbers
+    xleftmargin={0.75cm},
+    numbers=left,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+}
+%
+
+\setmainfont[Mapping=tex-text]{Minion Pro}
+
+\makeindex
+
+
+\title{Learn CSS}
+\author{穷屌丝联盟}
+\date{\today}
+
+\begin{document}
+
+\input{./cover.tex}
+
+
+\maketitle
+\tableofcontents
+\listoffigures
+\listoftables
+\printindex
+
+
+
+\include{introduction}
+
+
+\include{dcss}
+
+
+
+
+
+\include{style}
+
+
+\include{box}
+
+
+\include{positioning}
+
+
+\include{floating}
+
+\include{css3}
+
+
+
+\include{advanced}
+
+
+
+\include{reference}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
