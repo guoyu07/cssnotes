@@ -9,8 +9,13 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-\graphicspath{{img/}}
+\graphicspath{{../img/}}
 
+%Bibliography
+\usepackage{chapterbib}
+\usepackage[sectionbib,square,super,sort&compress]{natbib}
+
+\usepackage{marginnote}
 \usepackage{verbatim}
 \usepackage{graphicx}
 
@@ -21,6 +26,8 @@
 %\usepackage{rotating}
 \usepackage{color,colortbl,xcolor}
 
+\usepackage{framed}
+\colorlet{shadecolor}{blue!20}
 
 
 \usepackage{listings}
@@ -121,7 +128,7 @@
 \makeindex
 
 
-\title{Learn CSS}
+\title{CSS Notes}
 \author{穷屌丝联盟}
 \date{\today}
 
@@ -141,13 +148,7 @@
 \include{introduction}
 
 
-\include{dcss}
-
-
-
-
-
-\include{style}
+\include{foundation}
 
 
 \include{box}
@@ -158,13 +159,9 @@
 
 \include{floating}
 
-\include{css3}
-
-
-
 \include{advanced}
 
-
+\include{css3}
 
 \include{reference}
 
